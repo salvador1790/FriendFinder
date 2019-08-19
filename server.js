@@ -9,6 +9,8 @@ var PORT = process.env.PORT || 8000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static('./public/'));
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
@@ -20,4 +22,6 @@ app.listen(PORT,function(err){
     if (err) throw err;
 
 })
+
+module.exports = (urlencodedParser);
 

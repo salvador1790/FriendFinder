@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -165,21 +165,21 @@
             </select>
         </div>
 
-        <button id="submitFriend" type="button" class="btn btn-primary btn-lg btn-block"> Submit</button>
+        <button id="submitFriend" method="POST" action="/api/friends" type="button" class="btn btn-primary btn-lg btn-block"> Submit</button>
         <hr>
-        <a href="">API Friends List</a> |
-        <a href="">GitHub Repo</a>
+        <a href="http://localhost:8000/api/friends">API Friends List</a> |
+        <a href="https://github.com/salvador1790/FriendFinder">GitHub Repo</a>
     </div>
 
     <script>
     $("#submitFriend").click(function(){
-        var newPerson = {
+        app.post("/api/friends", function(req,res){
+            var newPerson = {
             name: $("#nameInput").val(),
             photo: $("#photoLinkInput").val(),
             scores:[$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
         }
-        
-        
+        })
     })
     
     

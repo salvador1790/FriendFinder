@@ -1,0 +1,45 @@
+.contHome{
+    background-color: #EEEEEE;
+    height: 400px;
+    border-radius: 10px;
+
+}
+
+.fbIcon{
+    height: 55px;
+    width: 55px;
+}
+
+.cname{
+    font-size: 65px;
+    display: inline;
+    position: relative;
+    top: 15px;
+}
+
+.title{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.message{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.homebtn{
+margin-top: 20px;
+height: 60px;
+}
+
+#cname2{
+
+}
+
+.questions{
+    margin-bottom: 10px;
+}
+
+.btn-block{
+    margin-top: 25px;
+}
